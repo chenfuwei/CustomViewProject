@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">CustomViewPorject</string>
+
+    <string name="care_notify_tip">温馨提示：</string>
+
 </resources>

@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
 
     <Button
         android:id="@+id/btnBottomItem"
         android:text="底部标签显示"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btnMsgVScroll"
+        android:text="消息上下轮动"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -29,4 +35,11 @@
 
     </com.customview.porject.widget.BottomItemSelectorView>
 
-</RelativeLayout>
+    <com.customview.porject.widget.MessageVScrollView
+        android:id="@+id/messageVScrollView"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.customview.porject.widget.MessageVScrollView>
+</LinearLayout>
