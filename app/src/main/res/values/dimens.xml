@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="employee_attach_child_item_width">60dp</dimen>
+    <dimen name="employee_attach_child_image_width">50dp</dimen>
+    <dimen name="employee_attach_child_image_top">10dp</dimen>
+</resources>

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import com.customview.porject.widget.AttachmentFrameLayout;
 import com.customview.porject.widget.BottomItemSelectorView;
 import com.customview.porject.widget.MessageVScrollView;
 
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "CustomViewProject";
     private BottomItemSelectorView bottomItemSelectorView;
     private MessageVScrollView vScrollView;
+    private AttachmentFrameLayout attachmentFrameLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         bottomItemSelectorViewTest();
         msgVScrollViewTest();
+        attachmentFrameLayoutTest();
 
     }
 
@@ -52,6 +55,12 @@ public class MainActivity extends AppCompatActivity {
     private void msgVScrollViewTest()
     {
         vScrollView = (MessageVScrollView)findViewById(R.id.messageVScrollView);
+        vScrollView.setOnSelectPositionListener(new MessageVScrollView.OnSelectPositionListener() {
+            @Override
+            public void onSelectPosition(int position) {
+                Log.i(TAG, "onSelectPosition position = " + position);
+            }
+        });
         findViewById(R.id.btnMsgVScroll).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -67,6 +76,23 @@ public class MainActivity extends AppCompatActivity {
                 {
                     vScrollView.stopScroll();
                     vScrollView.setVisibility(View.GONE);
+                }
+            }
+        });
+    }
+
+    private void attachmentFrameLayoutTest()
+    {
+        attachmentFrameLayout = findViewById(R.id.attachmentFrameLayout);
+        findViewById(R.id.btnAddAttachment).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(attachmentFrameLayout.getVisibility() != View.VISIBLE)
+                {
+                    attachmentFrameLayout.setVisibility(View.VISIBLE);
+                }else
+                {
+                    attachmentFrameLayout.setVisibility(View.GONE);
                 }
             }
         });

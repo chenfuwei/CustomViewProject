@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_marginTop="5dp"
+        android:id="@+id/attachments_add_iv"
+        android:background="@drawable/pa_employee_atach"
+        android:layout_width="@dimen/employee_attach_child_image_width"
+        android:layout_height="@dimen/employee_attach_child_image_width" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:layout_marginRight="-10dp"
+        android:padding="5dp"
+        android:visibility="invisible"
+        android:id="@+id/attachments_clear_iv"
+        android:layout_alignRight="@+id/attachments_add_iv"
+        android:layout_alignTop="@+id/attachments_add_iv">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:background="@drawable/pa_attachment_small"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

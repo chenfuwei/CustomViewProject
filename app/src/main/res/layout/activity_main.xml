@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#99000000"
     tools:context=".MainActivity">
 
 
@@ -16,6 +17,11 @@
     <Button
         android:id="@+id/btnMsgVScroll"
         android:text="消息上下轮动"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btnAddAttachment"
+        android:text="增加图片列表"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -42,4 +48,12 @@
         android:layout_height="wrap_content">
 
     </com.customview.porject.widget.MessageVScrollView>
+
+    <com.customview.porject.widget.AttachmentFrameLayout
+        android:visibility="gone"
+        android:id="@+id/attachmentFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.customview.porject.widget.AttachmentFrameLayout>
 </LinearLayout>
